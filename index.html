@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>learning</title>
+    <style>
+      .main-con{
+        display: flex; 
+      justify-content: center;
+      align-items: center;
+      align-content: center; 
+      }
+     .container{
+      margin: auto;
+     
+      height: 23rem;
+      width: 39rem;
+      background-color: slateblue;
+     border-radius: 2px;
+     cursor: pointer;
+      border: 2px ridge rgb(0, 0, 0);
+     }
+
+    </style>
+</head>
+<body>
+   <section class="main-con">
+
+    <div class="container" id="containers" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()" >
+      
+    </div>
+  
+
+</section>
+  <script>
+    mouseEnter =() =>{
+      // let colors=['red','green','blue','yellow']
+      let randomColor = Math.floor(Math.random()*11256).toString(16)
+      document.getElementById('containers').style.background = "#"+randomColor
+      console.log(`mouse  enter`)
+      
+    }
+    mouseLeave =()=>{
+      document.getElementById('containers').style.background ="pink"
+      console.log(`mouse  leave`)
+      
+    }
+
+    // mouseMove=()=>{
+    //   document.getElementById('containers').style.background ="brown"
+    //   console.log(`mouse  move`)
+      
+    // }
+    // addEventListener('mouseEnter',{
+      
+    // })
+  </script>
+</body>
+</html>
